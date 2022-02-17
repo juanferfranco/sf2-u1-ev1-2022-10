@@ -13,16 +13,7 @@ void loop()
 
   if (Serial.available() > 0) {
 
-    String dataRx = Serial.readStringUntil('\n');
-    if (dataRx == "r") {
-      Serial.print(digitalRead(SENSOR));
-      Serial.print('\n');
-    }
-    else if (dataRx == "1") {
-      digitalWrite(ACTUATOR, 1);
-    }
-    else if ( dataRx == "0") {
-      digitalWrite(ACTUATOR, 0);
-    }
+      // IMPLEMENTA EL PROTOCOLO
+
   }
 }

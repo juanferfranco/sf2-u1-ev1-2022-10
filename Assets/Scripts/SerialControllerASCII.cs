@@ -60,7 +60,7 @@ public class SerialControllerCustom : MonoBehaviour
 
     // Internal reference to the Thread and the object that runs in it.
     protected Thread thread;
-    protected SerialThreadLines serialThread;
+    protected SerialThreadASCII serialThread;
 
 
     // ------------------------------------------------------------------------
@@ -71,7 +71,7 @@ public class SerialControllerCustom : MonoBehaviour
 
     public void OpenPort()
     {
-        serialThread = new SerialThreadLines(portName,
+        serialThread = new SerialThreadASCII(portName,
             baudRate,
             reconnectionDelay,
             maxUnreadMessages,

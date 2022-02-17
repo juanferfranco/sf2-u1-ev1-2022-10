@@ -1,5 +1,5 @@
-#define SENSOR 0
-#define ACTUATOR 23
+#define SENSOR 33
+#define ACTUATOR 25
 
 void setup()
 {
@@ -10,19 +10,5 @@ void setup()
 
 void loop()
 {
-  uint8_t dataFrame[2];
-
-  if (Serial.available() > 1) {
-
-    dataFrame[0] = Serial.read();
-    dataFrame[1] = Serial.read();
-
-    if (dataFrame[0] == 0x01) {
-      Serial.write(digitalRead(SENSOR));
-    }
-    else if (dataFrame[0] == 0x02) {
-      digitalWrite(ACTUATOR, dataFrame[1]);
-    }
-
-  }
+  // IMPLEMENTA EL PROTOCOLO
 }
